@@ -1,0 +1,1 @@
+# CoppeliaSim_Python_Snippets_for_VSCode
