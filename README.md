@@ -1,31 +1,34 @@
-# CoppeliaSim Python Snippets for VSCode
-
-This repository contains a CoppeliaSim add-on that automatically exports all available CoppeliaSim API functions and constants as **Python snippets for Visual Studio Code**.  
-With these snippets, you get autocomplete-like suggestions when coding against the Remote API in Python.
 
 ---
 
-## ✨ Features
-- Generates `.code-snippets` file for VSCode.
-- Includes both **functions** (e.g. `sim.setObjectPosition(...)`) and **constants** (e.g. `sim.handle_world`).
-- Snippets are automatically derived from the official CoppeliaSim API → always up-to-date with your simulator version.
-- Works out of the box in **Python development** inside VSCode.
+# CoppeliaSim Python Snippets for VSCode
+
+This repository provides a **CoppeliaSim add-on** that automatically exports all available CoppeliaSim API functions and constants as **Python snippets for Visual Studio Code**.
+With these snippets, you get autocomplete-like suggestions when coding against the Remote API in Python.
 
 ---
 
 ## 📦 Installation
 
-1. Clone this repository or download the `coppeliaSnippets.lua` file.
-2. Copy the file into your CoppeliaSim `addOns/` folder:
-3. Start CoppeliaSim – the add-on will run and generate a file:
+There are two ways to install the snippets:
 
-4. Place the file into your VSCode user snippets folder:
-- **Windows**: `%APPDATA%\Code\User\snippets\`
-- **Linux**: `~/.config/Code/User/snippets/`
-- **macOS**: `~/Library/Application Support/Code/User/snippets/`
+### Option 1 – Generate your own snippets
 
-5. Restart VSCode.  
-You should now get autocomplete suggestions for all CoppeliaSim API calls in Python.
+1. Download the `VScode python snippets.lua` file.
+2. Copy the file into your CoppeliaSim `addOns/` folder.
+3. Start CoppeliaSim and go to **Modules → Exporters → VScode Python Snippets**.
+   
+   ![alt text](images/image1.png)
+
+4. A `.code-snippets` file will be generated in the same directory where CoppeliaSim was launched.
+5. Copy the generated file into your VSCode user snippets folder:
+
+   * **Global**: `%APPDATA%\Code\User\snippets\`
+   * **Workspace**: `WorkingDirectory\.vscode\`
+
+### Option 2 – Use pre-generated snippets
+
+Instead of generating them yourself, you can simply download one of the provided `.code-snippets` files from this repository and place it directly into your VSCode snippets folder (see step 5 above).
 
 ---
 
@@ -34,4 +37,13 @@ You should now get autocomplete suggestions for all CoppeliaSim API calls in Pyt
 Typing `sim.setO` in VSCode will expand to:
 
 ```python
-sim.setObjectPosition(objectHandle, position, relativeToObjectHandle)
+sim.setObjectPosition(, )
+```
+
+* The snippet includes placeholders **only for mandatory parameters**.  
+* You can still check the function description tooltip for the complete list of parameters and the return values with their types.  
+
+
+  ![alt text](images/image.png)
+
+---
